@@ -3,7 +3,7 @@ import turtle as trtl
 import random as rand
 
 #-----setup-----
-
+global letter
 apple_image = "apple.gif" # Store the file name of your shape
 
 wn = trtl.Screen()
@@ -13,14 +13,15 @@ wn.bgpic("background.gif")
 apple = trtl.Turtle()
 apple.penup()
 fall_speed = int(input("Enter fall speed as a number: "))
-
+letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 #-----functions-----
 
 # given a turtle, set that turtle to be shaped by the image file
 def draw_apple(apple):
   apple.shape(apple_image)
   global letter
-  letter = rand.choice(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"])
+  letter = rand.choice(letters)
+  letters.remove(letter)
   apple.goto(rand.randint(-150, 150), rand.randint(0, 100))
   apple.showturtle()
   apple.color("white")
@@ -45,7 +46,6 @@ def apple_gravity():
 #-----function calls-----
 
 draw_apple(apple)
-
-wn.onkeypress(apple_gravity)
+wn.onkeypress(apple_gravity, letter)
 wn.listen()
 wn.mainloop()

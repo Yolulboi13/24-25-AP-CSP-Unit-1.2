@@ -11,48 +11,76 @@ player_name = input("Input your name: ")
 wn = t.Screen()
 wn.colormode(255)
 
-wn.bgcolor('white')
+wn.bgcolor('black')
 
 ball = t.Turtle()
-#ball.shape('circle')
+ball.shape('circle')
 ball.color(rd.randint(50,255),rd.randint(50,255),rd.randint(50,255))
 ball.setheading(45)
 ball.speed(3)
 ball.penup()
 
-
 paddle = t.Turtle()
 paddle.speed('fastest')
-paddle.goto(0,100)
+paddle.penup()
+paddle.color('white')
+paddle.goto(0,-50)
+paddle.shape('square')
 
 #-----functions-----
 def bounce_wall():
     if ball.heading() == 45:
         ball.left(90)
-        print('bounce')
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
     elif ball.heading() == 135:
         ball.right(90)
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
     elif ball.heading() == 225:
         ball.left(90)
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
     elif ball.heading() == 315:
         ball.right(90)
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
+
 def bounce_ceiling():
-    if ball.heading == 45 or ball.heading == 135:
-        ball.left(180)
+    if ball.heading() == 45:
+        ball.right(90)
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
+    elif ball.heading() == 135:
+        ball.left(90)
+        ball.color(rd.randint(50, 255), rd.randint(50, 255), rd.randint(50, 255))
+
+def bounce_paddle():
+    if ball.heading() == 225:
+        ball.right(90)
+    elif ball.heading() == 315:
+        ball.left(90)
 
 def loser():
     wn.mainloop()
 def winner():
     print("yay")
 
+def paddle_left():
+    paddle.setheading(180)
+    paddle.forward(2)
+def paddle_right():
+    paddle.setheading(0)
+    paddle.forward(2)
+
 #-----events-----
+
 while True:
     ball.forward(2)
-    if ball.ycor() <= paddle.ycor():
-        #loser()
-        paddle.goto(0,150)
-    elif ball.xcor() >= -150 or ball.xcor() >= 150:
+    wn.onkeypress(paddle_left, "a")
+    wn.onkeypress(paddle_right, "d")
+    wn.listen()
+    if ball.xcor() <= -100 or ball.xcor() >= 100:
         bounce_wall()
-    elif ball.ycor() >= 150:
+    if ball.ycor() >= 250:
         bounce_ceiling()
-
+    if ball.ycor() < -50:
+        loser()
+    if ball.ycor() <= 45:
+        if ball.distance(paddle) <= 20:
+            bounce_paddle()

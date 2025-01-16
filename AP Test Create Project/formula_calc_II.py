@@ -55,24 +55,31 @@ def quartic_formula():
     c = float(input("Please enter the value for C: "))
     d = float(input("Please enter the value for D: "))
     e = float(input("Please enter the value for E: "))
-    the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*(((b**2)-(3*a*c)+(12*d))**3) + (((2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
-    result = (-a/4) - 0.5 * math.sqrt( (((-a**2)-4)-((2*b)/3)+(((2**(1/3))*((b*2)-(3*a*c)+(12*d)))/3*(the_big_one))+(the_big_one/(32**(1/3)))) -   )))
+    the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
+    result = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a(**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) ))))))))
+    print('''
+    The result is ''' + str(result) +'''
+    ''')
+    history.append("Quartic Formula: " + str(result))
 
 print("Welcome to the Cubic Formula Calculator!")
 while True:
     choice = int(input('''What would you like to do?
 
     1. Cubic Formula
-    2. Heron's Formula
-    3. Surface Area of a Sphere
-    4. View History
+    2. Quartic Formula
+    3. Heron's Formula
+    4. Surface Area of a Sphere
+    5. View History
 
     '''))
     if choice == 1:
         cubic_formula()
     if choice == 2:
-        herons_formula()
+        quartic_formula()
     if choice == 3:
-        sphere_surface_area()
+        herons_formula()
     if choice == 4:
+        sphere_surface_area()
+    if choice == 5:
         view_history()

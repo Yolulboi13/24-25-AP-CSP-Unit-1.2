@@ -50,12 +50,15 @@ def quadratic_formula():
     a = float(input("Please enter the value for A: "))
     b = float(input("Please enter the value for B: "))
     c = float(input("Please enter the value for C: "))
-    result = -b + math.sqrt((b**2)-(4*a*c)) / (2*a)
-    result_2 = -b - math.sqrt((b**2)-(4*a*c)) / (2*a)
-    print('''
-    The result is ''' + str(result) +''' and ''' + str(result_2)+'''
-    ''')
-    history.append("Quadratic Formula: " + str(result) + ", " + str(result_2))
+    if math.sqrt((b**2)-(4*a*c)) < 0:
+        print("This has no zeros.")
+    else:
+        result = -b + math.sqrt((b**2)-(4*a*c)) / (2*a)
+        result_2 = -b - math.sqrt((b**2)-(4*a*c)) / (2*a)
+        print('''
+        The result is ''' + str(result) +''' and ''' + str(result_2)+'''
+        ''')
+        history.append("Quadratic Formula: " + str(result) + ", " + str(result_2))
 
 print("Welcome to the Second Formula Calculator!")
 while True:

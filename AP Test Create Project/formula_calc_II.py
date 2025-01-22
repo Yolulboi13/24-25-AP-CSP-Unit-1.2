@@ -23,9 +23,10 @@ def cubic_formula():
     history.append("Cubic Formula: " + str(result))
 
 def view_history():
-    print('''
-    '''+str(history)+'''
-    ''')
+    for item in range(len(history)):
+        print('''
+        '''+str(history[item])+'''
+        ''')
 
 def herons_formula():
     a = float(input("Please enter the value for A: "))
@@ -50,7 +51,7 @@ def quadratic_formula():
     a = float(input("Please enter the value for A: "))
     b = float(input("Please enter the value for B: "))
     c = float(input("Please enter the value for C: "))
-    if math.sqrt((b**2)-(4*a*c)) < 0:
+    if ((b**2)-(4*a*c)) < 0:
         print('''
         This has no zeros.
         ''')
@@ -75,7 +76,7 @@ def quartic_formula():
     else:
         result = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
         print('''
-        The result is ''' + str(result) +'''
+        The result for x is ''' + str(result) +'''
         ''')
         history.append("Quartic Formula: " + str(result))
 

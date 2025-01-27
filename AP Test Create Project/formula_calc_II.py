@@ -39,8 +39,7 @@ def herons_formula():
     ''')
     history.append("Heron's Formula: " + str(result))
 
-def sphere_surface_area():
-    r = float(input("Please enter the radius of the sphere: "))
+def sphere_surface_area(r):
     result = 4*math.pi*(r**2)
     print('''
     The result is ''' + str(result) +'''
@@ -101,6 +100,6 @@ while True:
     if choice == 4:
         herons_formula()
     if choice == 5:
-        sphere_surface_area()
+        sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
     if choice == 6:
         view_history()

@@ -22,11 +22,17 @@ def cubic_formula():
     ''')
     history.append("Cubic Formula: " + str(result))
 
-def view_history():
+def view_history(num):
     for item in range(len(history)):
         print('''
         '''+str(history[item])+'''
         ''')
+        if len(history) == 0:
+            print("There is no History to view.")
+            break
+        if item == num:
+            break
+
 
 def herons_formula():
     a = float(input("Please enter the value for A: "))
@@ -102,4 +108,5 @@ while True:
     if choice == 5:
         sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
     if choice == 6:
-        view_history()
+        entries = int(input("How amny entries back back would you like to go?: "))
+        view_history(entries)

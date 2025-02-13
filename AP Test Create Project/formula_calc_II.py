@@ -23,15 +23,21 @@ def cubic_formula():
     history.append("Cubic Formula: " + str(result))
 
 def view_history(num):
-    for item in range(len(history)):
-        print('''
-        '''+str(history[item])+'''
+    if len(history) == 0:
+        print('''  
+        There is no History to view.
         ''')
-        if len(history) == 0:
-            print("There is no History to view.")
-            break
-        if item == num:
-            break
+    elif num == "ALL":
+        for item in range(len(history)):
+            print('''
+            ''' + str(history[item - 1]))
+    else:
+        for item in range(len(history)):
+            print('''
+            '''+str(history[item - 1]))
+            if item == num:
+                break
+        print(" ")
 
 
 def herons_formula():
@@ -86,7 +92,8 @@ def quartic_formula():
         history.append("Quartic Formula: " + str(result))
 
 print("Welcome to the Second Formula Calculator!")
-while True:
+run = True
+while run == True:
     choice = int(input('''What would you like to do?
 
     1. Quartic Formula
@@ -95,6 +102,7 @@ while True:
     4. Heron's Formula
     5. Surface Area of a Sphere
     6. View History
+    7. End Program
 
     '''))
     if choice == 1:
@@ -108,5 +116,9 @@ while True:
     if choice == 5:
         sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
     if choice == 6:
-        entries = int(input("How amny entries back back would you like to go?: "))
+        entries = (input("How many entries back back would you like to go? Enter ALL to view the entire History for this session: "))
+        if entries == :
+            entries == "ALL"
         view_history(entries)
+    if choice == 7:
+        run = False

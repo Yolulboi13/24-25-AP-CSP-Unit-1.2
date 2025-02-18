@@ -23,20 +23,25 @@ def cubic_formula():
     history.append("Cubic Formula: " + str(result))
 
 def view_history(num):
-    if len(history) == 0:
+    if num == "ALL":
+        for item in range(len(history)):
+            print('''
+                ''' + str(history[item - 1]))
+    elif num > len(history):
+        print('''
+        There aren't that many entries in the session history.
+        ''')
+    elif len(history) == 0:
         print('''  
         There is no History to view.
         ''')
-    elif num == "ALL":
-        for item in range(len(history)):
-            print('''
-            ''' + str(history[item - 1]))
     else:
-        for item in range(len(history)):
-            print('''
-            '''+str(history[item - 1]))
+        for item in range(num):
             if item == num:
                 break
+            else:
+                print('''
+                '''+str(history[item - 1]))
         print(" ")
 
 
@@ -116,9 +121,15 @@ while run == True:
     if choice == 5:
         sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
     if choice == 6:
-        entries = (input("How many entries back back would you like to go? Enter ALL to view the entire History for this session: "))
-        if entries == :
-            entries == "ALL"
-        view_history(entries)
+        entries = input("How many entries back back would you like to go? Enter ALL to view the entire History for this session: ")
+        numbers_through_100 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]
+        if entries in numbers_through_100:
+            view_history(int(entries))
+        elif entries == "ALL":
+            view_history(entries)
+        else:
+            print('''  
+            Please try again with a valid input. Only numbers 1-100 are accepted.
+            ''')
     if choice == 7:
         run = False

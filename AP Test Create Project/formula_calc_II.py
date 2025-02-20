@@ -44,7 +44,6 @@ def view_history(num):
                 '''+str(history[item - 1]))
         print(" ")
 
-
 def herons_formula():
     a = float(input("Please enter the value for A: "))
     b = float(input("Please enter the value for B: "))
@@ -67,7 +66,7 @@ def quadratic_formula():
     a = float(input("Please enter the value for A: "))
     b = float(input("Please enter the value for B: "))
     c = float(input("Please enter the value for C: "))
-    if ((b**2)-(4*a*c)) < 0:
+    if (b**2)-(4*a*c) < 0:
         print('''
         This has no zeros.
         ''')
@@ -75,7 +74,7 @@ def quadratic_formula():
         result = -b + math.sqrt((b**2)-(4*a*c)) / (2*a)
         result_2 = -b - math.sqrt((b**2)-(4*a*c)) / (2*a)
         print('''
-        The result is ''' + str(result) +''' and ''' + str(result_2)+'''
+        The results are ''' + str(result) +''' and ''' + str(result_2)+'''
         ''')
         history.append("Quadratic Formula: " + str(result) + ", " + str(result_2))
 
@@ -96,7 +95,16 @@ def quartic_formula():
         ''')
         history.append("Quartic Formula: " + str(result))
 
-print("Welcome to the Second Formula Calculator!")
+def pythatgorean_theorem():
+    a = float(input("Please enter the value for A: "))
+    b = float(input("Please enter the value for B: "))
+    result = math.sqrt((a**2)+(b**2))
+    print('''
+    The result is ''' + str(result), "or the square root of " + (result**2)'''
+    ''')
+    history.append("Pythagorean Theorem: " + str(result) +"/The square root of " + str(result))
+
+print("Welcome to the Improved Formula Calculator!")
 run = True
 while run == True:
     choice = int(input('''What would you like to do?
@@ -106,21 +114,24 @@ while run == True:
     3. Quadratic Formula
     4. Heron's Formula
     5. Surface Area of a Sphere
-    6. View History
-    7. End Program
+    6. Pythagorean Theorem
+    7. View History
+    8. End Program
 
     '''))
     if choice == 1:
         quartic_formula()
-    if choice == 2:
+    elif choice == 2:
         cubic_formula()
-    if choice == 3:
+    elif choice == 3:
         quadratic_formula()
-    if choice == 4:
+    elif choice == 4:
         herons_formula()
-    if choice == 5:
+    elif choice == 5:
         sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
-    if choice == 6:
+    elif choice == 6:
+        pythatgorean_theorem()
+    elif choice == 7:
         entries = input("How many entries back back would you like to go? Enter ALL to view the entire History for this session: ")
         numbers_through_100 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]
         if entries in numbers_through_100:
@@ -129,7 +140,11 @@ while run == True:
             view_history(entries)
         else:
             print('''  
-            Please try again with a valid input. Only numbers 1-100 are accepted.
-            ''')
-    if choice == 7:
+                    Please try again with a valid input. Only numbers 1-100 are accepted.
+                    ''')
+    elif choice == 8:
         run = False
+    else:
+        print('''
+        That is not a valid selection, please try again.
+        ''')

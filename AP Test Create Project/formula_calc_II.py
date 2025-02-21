@@ -18,7 +18,7 @@ def cubic_formula():
     frac_6 = (b/(3*a))
     result = cube_root((frac_1+frac_2-frac_3) + math.sqrt((frac_1+frac_2-frac_3)**2) + ((frac_4-frac_5)**3) + (frac_1+frac_2-frac_3) + math.sqrt((frac_1+frac_2-frac_3)**2) + ((frac_4-frac_5)**3) - frac_6)
     print('''
-    The result for x is ''' + str(result) +'''
+    The results are ''' + str(result) +'''
     ''')
     history.append("Cubic Formula: " + str(result))
 
@@ -89,25 +89,28 @@ def quartic_formula():
         This has no zeros.
         ''')
     else:
-        result = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
+        result1 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
+        result2 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) + (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
+        result3 =((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) + ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
+        result4 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) + (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) + ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
         print('''
-        The result for x is ''' + str(result) +'''
+        The results are ''' + str(result1) + ',' + str(result2) + ',' +str(result3) + ', and ' + str(result4) + '''
         ''')
-        history.append("Quartic Formula: " + str(result))
+        history.append("Quartic Formula: " + str(result1) + ',' + str(result2) + ',' +str(result3) + ', and ' + str(result4))
 
-def pythatgorean_theorem():
+def pythagorean_theorem():
     a = float(input("Please enter the value for A: "))
     b = float(input("Please enter the value for B: "))
     result = math.sqrt((a**2)+(b**2))
     print('''
-    The result is ''' + str(result), "or the square root of " + (result**2)'''
+    The result is ''' + str(result), "or the square root of " + str((result**2)) + '''
     ''')
-    history.append("Pythagorean Theorem: " + str(result) +"/The square root of " + str(result))
+    history.append("Pythagorean Theorem: " + str(result) +"/The square root of " + str(result**2))
 
 print("Welcome to the Improved Formula Calculator!")
 run = True
 while run == True:
-    choice = int(input('''What would you like to do?
+    choice = input('''What would you like to do?
 
     1. Quartic Formula
     2. Cubic Formula
@@ -118,7 +121,9 @@ while run == True:
     7. View History
     8. End Program
 
-    '''))
+    ''')
+    if choice in ["1","2","3","4","5","6","7","8"]:
+        choice == int(choice)
     if choice == 1:
         quartic_formula()
     elif choice == 2:
@@ -130,7 +135,7 @@ while run == True:
     elif choice == 5:
         sphere_surface_area(float(input("Please enter the radius of the sphere: ")))
     elif choice == 6:
-        pythatgorean_theorem()
+        pythagorean_theorem()
     elif choice == 7:
         entries = input("How many entries back back would you like to go? Enter ALL to view the entire History for this session: ")
         numbers_through_100 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]

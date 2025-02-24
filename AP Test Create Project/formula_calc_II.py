@@ -18,7 +18,7 @@ def cubic_formula():
     frac_6 = (b/(3*a))
     result = cube_root((frac_1+frac_2-frac_3) + math.sqrt((frac_1+frac_2-frac_3)**2) + ((frac_4-frac_5)**3) + (frac_1+frac_2-frac_3) + math.sqrt((frac_1+frac_2-frac_3)**2) + ((frac_4-frac_5)**3) - frac_6)
     print('''
-    The results are ''' + str(result) +'''
+    The result is ''' + str(result) +'''. Please multiply by the appropriate value to get the roots.
     ''')
     history.append("Cubic Formula: " + str(result))
 
@@ -107,6 +107,27 @@ def pythagorean_theorem():
     ''')
     history.append("Pythagorean Theorem: " + str(result) +"/The square root of " + str(result**2))
 
+def decimal_to_fraction():
+    number = float(input("Please enter the decimal to convert into a fraction: "))
+    for numerator in range(1,1000):
+        for denomenator in range(1,1000):
+            if numerator/denomenator == number:
+                print('''
+                The result is ''' + str(numerator) + "/" + str(denomenator) + '''
+                ''')
+                history.append("Decimal to Fraction: "+ str(numerator) + "/" + str(denomenator))
+                break
+            break
+    for numerator in range(-1000,-1):
+        for denomenator in range(-1000,-1):
+            if numerator/denomenator == number:
+                print('''
+                The result is ''' + str(numerator) + "/" + str(denomenator) + '''
+                ''')
+                history.append("Decimal to Fraction: "+ str(numerator) + "/" + str(denomenator))
+                break
+            break
+
 print("Welcome to the Improved Formula Calculator!")
 run = True
 while run == True:
@@ -123,7 +144,7 @@ while run == True:
 
     ''')
     if choice in ["1","2","3","4","5","6","7","8"]:
-        choice == int(choice)
+        choice = int(choice)
     if choice == 1:
         quartic_formula()
     elif choice == 2:
@@ -148,7 +169,7 @@ while run == True:
                     Please try again with a valid input. Only numbers 1-100 are accepted.
                     ''')
     elif choice == 8:
-        run = False
+        decimal_to_fraction()
     else:
         print('''
         That is not a valid selection, please try again.

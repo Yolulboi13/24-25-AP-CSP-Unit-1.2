@@ -32,7 +32,7 @@ def view_history(num):
         There aren't that many entries in the session history.
         ''')
     elif len(history) == 0:
-        print('''  
+        print('''  69
         There is no History to view.
         ''')
     else:
@@ -83,16 +83,16 @@ def quartic_formula():
     b = float(input("Please enter the value for B: "))
     c = float(input("Please enter the value for C: "))
     d = float(input("Please enter the value for D: "))
-    the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
-    if (-4*(((b**2)-(3*a*c)+(12*d))**3)+(((2*(b**3))-(9*a*b*c)+(27*(c**2))+(27*(a**2)*d)-(72*b*d)))**2) < 0 or ( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * ( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c) / 4)) < 0 or (((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) < 0:
+    if (-4*(((b**2)-(3*a*c)+(12*d))**3)+(((2*(b**3))-(9*a*b*c)+(27*(c**2))+(27*(a**2)*d)-(72*b*d)))**2) < 0 or ((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * (((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c) / 4)) < 0 or (((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) < 0:
         print('''
         This has no zeros.
         ''')
     else:
-        result1 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
-        result2 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) + (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) - ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
-        result3 =((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) - (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) + ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
-        result4 = ((-a/4) - 0.5 * math.sqrt( ( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )) + (1/2) * math.sqrt(( ((-a**2)/2) - ((4*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d))) / 3 * the_big_one ) - (the_big_one/(32**(1/3))) + ((-a**3)) + (4*a*b) - (8*c)) / (4 * math.sqrt(( ((-a**2)/2) - ((2*b)/3) + ( ( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * (the_big_one) ) + (the_big_one / (32**(1/3)) )))))))
+        the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
+        result1 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
+        result2 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) + (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
+        result3 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) + ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
+        result4 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) + (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) + ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
         print('''
         The results are ''' + str(result1) + ',' + str(result2) + ',' +str(result3) + ', and ' + str(result4) + '''
         ''')
@@ -107,30 +107,9 @@ def pythagorean_theorem():
     ''')
     history.append("Pythagorean Theorem: " + str(result) +"/The square root of " + str(result**2))
 
-def decimal_to_fraction():
-    number = float(input("Please enter the decimal to convert into a fraction: "))
-    for numerator in range(1,1000):
-        for denomenator in range(1,1000):
-            if numerator/denomenator == number:
-                print('''
-                The result is ''' + str(numerator) + "/" + str(denomenator) + '''
-                ''')
-                history.append("Decimal to Fraction: "+ str(numerator) + "/" + str(denomenator))
-                break
-            break
-    for numerator in range(-1000,-1):
-        for denomenator in range(-1000,-1):
-            if numerator/denomenator == number:
-                print('''
-                The result is ''' + str(numerator) + "/" + str(denomenator) + '''
-                ''')
-                history.append("Decimal to Fraction: "+ str(numerator) + "/" + str(denomenator))
-                break
-            break
-
 print("Welcome to the Improved Formula Calculator!")
 run = True
-while run == True:
+while run:
     choice = input('''What would you like to do?
 
     1. Quartic Formula
@@ -143,7 +122,7 @@ while run == True:
     8. End Program
 
     ''')
-    if choice in ["1","2","3","4","5","6","7","8"]:
+    if choice in ["1","2","3","4","5","6","7","8","69"]:
         choice = int(choice)
     if choice == 1:
         quartic_formula()
@@ -166,10 +145,12 @@ while run == True:
             view_history(entries)
         else:
             print('''  
-                    Please try again with a valid input. Only numbers 1-100 are accepted.
+         8           Please try again with a valid input. Only numbers 1-100 are accepted.
                     ''')
     elif choice == 8:
-        decimal_to_fraction()
+        run = False
+    elif choice == 69:
+        print("Hey! You found the funny number that sends this message. Good for you, buddy. Now please use the program the way it was intended.")
     else:
         print('''
         That is not a valid selection, please try again.

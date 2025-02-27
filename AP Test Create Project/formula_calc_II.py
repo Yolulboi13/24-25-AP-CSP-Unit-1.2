@@ -83,12 +83,12 @@ def quartic_formula():
     b = float(input("Please enter the value for B: "))
     c = float(input("Please enter the value for C: "))
     d = float(input("Please enter the value for D: "))
-    if (-4*(((b**2)-(3*a*c)+(12*d))**3)+(((2*(b**3))-(9*a*b*c)+(27*(c**2))+(27*(a**2)*d)-(72*b*d)))**2) < 0 or ((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * (((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c) / 4)) < 0 or (((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) < 0:
+    the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
+    if (-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2) < 0:
         print('''
         This has no zeros.
         ''')
     else:
-        the_big_one = (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d) + math.sqrt(-4*( ( (b**2) - (3*a*c) + (12*d) )**3) + ( ( (2*(b**3)) - (9*a*b*c) + (27*(c**2)) + (27*(a**2)*d) - (72*b*d)))**2)**(1/3)
         result1 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
         result2 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) + (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) - ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
         result3 = ((-a/4) - 0.5 * math.sqrt((((-a**2)/2) - ((2*b)/3) + (( (2**(1/3)) * ((b*2) - (3*a*c) + (12*d)) ) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))) - (1 / 2) * math.sqrt((((-a ** 2) / 2) - ((4 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) - (the_big_one / (32 ** (1 / 3))) + ((-a ** 3)) + (4 * a * b) - (8 * c)) / (4 * math.sqrt((((-a ** 2) / 2) - ((2 * b) / 3) + (((2 ** (1 / 3)) * ((b * 2) - (3 * a * c) + (12 * d))) / 3 * the_big_one) + (the_big_one / (32 ** (1 / 3)))))))))
@@ -145,8 +145,8 @@ while run:
             view_history(entries)
         else:
             print('''  
-         8           Please try again with a valid input. Only numbers 1-100 are accepted.
-                    ''')
+            Please try again with a valid input. Only nu7mbers 1-100 are accepted.
+            ''')
     elif choice == 8:
         run = False
     elif choice == 69:

@@ -145,7 +145,7 @@ while run:
             view_history(entries)
         else:
             print('''  
-            Please try again with a valid input. Only nu7mbers 1-100 are accepted.
+            Please try again with a valid input. Only numbers 1-100 are accepted.
             ''')
     elif choice == 8:
         run = False
